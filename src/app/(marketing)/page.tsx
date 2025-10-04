@@ -196,91 +196,33 @@ const HomePage = () => {
                        
                     </div>
                 </AnimationContainer>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 place-items-start gap-4 md:gap-8 py-10">
-                    <div className="flex flex-row-3 items-start h-min gap-6">
-                        {REVIEWS.slice(0, 3).map((review, index) => (
-                            <AnimationContainer delay={0.2 * index} key={index}>
-                                <MagicCard key={index} className="md:p-0">
-                                    <Card className="flex flex-col w-full border-none h-min">
-                                        <CardHeader className="space-y-0">
-                                            <CardTitle className="text-lg font-medium text-muted-foreground">
-                                                {review.name}
-                                            </CardTitle>
-                                            <CardDescription>
-                                                {review.username}
-                                            </CardDescription>
-                                        </CardHeader>
-                                        <CardContent className="space-y-4 pb-4">
-                                            <p className="text-muted-foreground">
-                                                {review.review}
-                                            </p>
-                                        </CardContent>
-                                        <CardFooter className="w-full space-x-1 mt-auto">
-                                            {Array.from({ length: review.rating }, (_, i) => (
-                                                <StarIcon key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
-                                            ))}
-                                        </CardFooter>
-                                    </Card>
-                                </MagicCard>
-                            </AnimationContainer>
-                        ))}
-                    </div>
-                    <div className="flex flex-col items-start h-min gap-6">
-                        {REVIEWS.slice(3, 6).map((review, index) => (
-                            <AnimationContainer delay={0.2 * index} key={index}>
-                                <MagicCard key={index} className="md:p-0">
-                                    <Card className="flex flex-col w-full border-none h-min">
-                                        <CardHeader className="space-y-0">
-                                            <CardTitle className="text-lg font-medium text-muted-foreground">
-                                                {review.name}
-                                            </CardTitle>
-                                            <CardDescription>
-                                                {review.username}
-                                            </CardDescription>
-                                        </CardHeader>
-                                        <CardContent className="space-y-4 pb-4">
-                                            <p className="text-muted-foreground">
-                                                {review.review}
-                                            </p>
-                                        </CardContent>
-                                        <CardFooter className="w-full space-x-1 mt-auto">
-                                            {Array.from({ length: review.rating }, (_, i) => (
-                                                <StarIcon key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
-                                            ))}
-                                        </CardFooter>
-                                    </Card>
-                                </MagicCard>
-                            </AnimationContainer>
-                        ))}
-                    </div>
-                    <div className="flex flex-col items-start h-min gap-6">
-                        {REVIEWS.slice(6, 9).map((review, index) => (
-                            <AnimationContainer delay={0.2 * index} key={index}>
-                                <MagicCard key={index} className="md:p-0">
-                                    <Card className="flex flex-col w-full border-none h-min">
-                                        <CardHeader className="space-y-0">
-                                            <CardTitle className="text-lg font-medium text-muted-foreground">
-                                                {review.name}
-                                            </CardTitle>
-                                            <CardDescription>
-                                                {review.username}
-                                            </CardDescription>
-                                        </CardHeader>
-                                        <CardContent className="space-y-4 pb-4">
-                                            <p className="text-muted-foreground">
-                                                {review.review}
-                                            </p>
-                                        </CardContent>
-                                        <CardFooter className="w-full space-x-1 mt-auto">
-                                            {Array.from({ length: review.rating }, (_, i) => (
-                                                <StarIcon key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
-                                            ))}
-                                        </CardFooter>
-                                    </Card>
-                                </MagicCard>
-                            </AnimationContainer>
-                        ))}
-                    </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 py-10">
+                    {REVIEWS.map((review, index) => (
+                        <AnimationContainer delay={0.15 + 0.05 * index} key={index}>
+                            <MagicCard className="md:p-0 h-full">
+                                <Card className="flex flex-col w-full border-none h-full">
+                                    <CardHeader className="space-y-0">
+                                        <CardTitle className="text-lg font-medium text-muted-foreground">
+                                            {review.name}
+                                        </CardTitle>
+                                        <CardDescription>
+                                            {review.username}
+                                        </CardDescription>
+                                    </CardHeader>
+                                    <CardContent className="space-y-4 pb-4">
+                                        <p className="text-muted-foreground">
+                                            {review.review}
+                                        </p>
+                                    </CardContent>
+                                    <CardFooter className="w-full space-x-1 mt-auto">
+                                        {Array.from({ length: review.rating }, (_, i) => (
+                                            <StarIcon key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
+                                        ))}
+                                    </CardFooter>
+                                </Card>
+                            </MagicCard>
+                        </AnimationContainer>
+                    ))}
                 </div>
             </MaxWidthWrapper>
 

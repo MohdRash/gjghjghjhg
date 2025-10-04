@@ -138,7 +138,7 @@ export const REVIEWS = [
         name: "Lorenzo Faletra",
         username: "FOUNDER OF PARROT SECURITY",
         avatar: "https://randomuser.me/api/portraits/women/2.jpg",
-        rating: 5,
+        rating: 6,
         review: "Their cloud integration services transformed our workflow. Great communication and Seamless implementation and excellent post-launch support."
     },
     
