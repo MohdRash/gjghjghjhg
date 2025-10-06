@@ -13,9 +13,9 @@ const Footer = () => {
 
                 <AnimationContainer delay={0.1}>
                     <div className="flex flex-col items-start justify-start md:max-w-[200px]">
-                        <div className="flex items-start">
+                        <div className="flex items-start" style={{color:'#782faf'}}>
                             {/* <Icons.logo className="w-7 h-7" /> */}
-                            <Image style={{borderRadius: 10, opacity: 0.8, height:50, width: "100%"}} src="/logo-main.png" alt="DEVMONIX" width={100} height={25} />
+                            <Image style={{borderRadius: 10, opacity: 0.8, height:50, width: "100%"}} src="/logo-main.png" alt="DEVMONIX" width={100} height={25} />™
                         </div>
                         <p className="text-muted-foreground mt-4 text-sm text-start">
                             DEVMONIX TECHNOLOGIES

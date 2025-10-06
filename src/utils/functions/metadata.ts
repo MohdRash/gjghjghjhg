@@ -7,18 +7,18 @@ export const generateMetadata = ({
     icons = [
         {
             rel: "dev-logo",
-            sizes: "32x32",
-            url: "/logo-main.png"
+            sizes: "100x100",
+            url: "/singledr.png"
         },
         {
             rel: "icon",
-            sizes: "32x32",
-            url: "/logo-main.png"
+            sizes: "100x100",
+            url: "/singledr.png"
         },
         {
             rel: "icon",
-            sizes: "16x16",
-            url: "/logo-main.png"
+            sizes: "100x100",
+            url: "/singledr.png"
         },
     ],
     noIndex = false
@@ -41,7 +41,7 @@ export const generateMetadata = ({
         title,
         description,
         ...(image && { card: "summary_large_image", images: [image] }),
-        creator: "@devmonixtechnology",
+        creator: "@devmonixtech",
     },
     // metadataBase: new URL(process.env.APP_DOMAIN!),
     ...(noIndex && { robots: { index: false, follow: false } }),
