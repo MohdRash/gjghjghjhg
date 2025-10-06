@@ -47,7 +47,7 @@ const Navbar = () => {
                     <div className="flex items-center space-x-12">
                         <Link href="/#home">
                             <span className="text-transparent bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text inline-bloc text-lg font-bold font-heading !leading-none">
-                                DEVMONIX TECHNOLOGIES
+                                DEVMONIX TECHNOLOGIES ™
                             </span>
                         </Link>
 

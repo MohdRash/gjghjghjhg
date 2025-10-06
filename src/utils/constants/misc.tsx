@@ -121,22 +121,22 @@ export const FEATURES = [
 
 export const REVIEWS = [
     {
-        name: "Ihsan PS",
-        username: "CEO OF EBSM MALAYSIA",
+        name: "Mohammed Ihsan PS",
+        username: "FOUNDER & CTO OF EBSM MALAYSIA",
         avatar: "https://randomuser.me/api/portraits/women/1.jpg",
         rating: 6,
         review: "Their team delivered an exceptional custom software solution that perfectly met our complex business needs. Especially they provided excellent post-launch support. Highly recommend!"
     },
     {
         name: "Abdul Basith",
-        username: "CEO OF IMMIX TECHNOLOGIES",
+        username: "FOUNDER & CEO OF IMMIX TECHNOLOGIES",
         avatar: "https://randomuser.me/api/portraits/men/1.jpg",
         rating: 6,
         review: "We partnered with them for our Datacenters Portal development, with impressive features for business operations. The results were impressive. Great communication and solid."
     },
     {
         name: "Lorenzo Faletra",
-        username: "FOUNDER OF PARROT SECURITY",
+        username: "FOUNDER & CEO OF PARROT SECURITY",
         avatar: "https://randomuser.me/api/portraits/women/2.jpg",
         rating: 6,
         review: "Their cloud integration services transformed our workflow. Great communication and Seamless implementation and excellent post-launch support."

@@ -16,8 +16,6 @@ export const CARDS = [
         Icon: Link2Icon,
         name: "Shorten links",
         description: "Create short links that are easy to remember and share.",
-        href: "#",
-        cta: "Learn more",
         className: "col-span-3 lg:col-span-1",
         background: (
             <Card className="absolute top-10 left-10 origin-top rounded-none rounded-tl-md transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_0%,#000_100%)] group-hover:scale-105 border border-border border-r-0">
@@ -46,8 +44,6 @@ export const CARDS = [
         Icon: SearchIcon,
         name: "Search your links",
         description: "Quickly find the links you need with AI-powered search.",
-        href: "#",
-        cta: "Learn more",
         className: "col-span-3 lg:col-span-2",
         background: (
             <Command className="absolute right-10 top-10 w-[70%] origin-to translate-x-0 border border-border transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_40%,#000_100%)] group-hover:-translate-x-10 p-2">
@@ -67,8 +63,6 @@ export const CARDS = [
         Icon: WaypointsIcon,
         name: "Connect your apps",
         description: "Integrate with your favorite apps and services.",
-        href: "#",
-        cta: "Learn more",
         className: "col-span-3 lg:col-span-2 max-w-full overflow-hidden",
         background: (
             <Integrations className="absolute right-2 pl-28 md:pl-0 top-4 h-[300px] w-[600px] border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105" />
@@ -79,8 +73,6 @@ export const CARDS = [
         name: "Calendar",
         description: "Keep track of your links with our calendar view.",
         className: "col-span-3 lg:col-span-1",
-        href: "#",
-        cta: "Learn more",
         background: (
             <Calendar
                 mode="single"
@@ -118,16 +110,12 @@ const BentoCard = memo(({
     background,
     Icon,
     description,
-    href,
-    cta,
 }: {
     name: string;
     className: string;
     background: ReactNode;
     Icon: any;
     description: string;
-    href: string;
-    cta: string;
 }) => (
     <div
         key={name}
@@ -151,10 +139,7 @@ const BentoCard = memo(({
                 "absolute bottom-0 flex w-full translate-y-10 flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100",
             )}
         >
-            <Link href={href} className={buttonVariants({ size: "sm", variant: "ghost", className: "cursor-pointer" })}>
-                {cta}
-                <ArrowRightIcon className="ml-2 h-4 w-4" />
-            </Link>
+            
         </div>
         <div className="pointer-events-none absolute inset-0 transition-all duration-300 group-hover:bg-black/[.03] group-hover:dark:bg-neutral-800/10" />
     </div>

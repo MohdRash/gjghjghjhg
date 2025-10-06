@@ -15,11 +15,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Particles from "@/components/ui/particles";
 
-// Dynamic imports for better performance
-const KubernatesHomePage = dynamic(() => import('./components/KubernatesHomePage'), {
-    ssr: false,
-    loading: () => <div className="h-96 bg-gradient-to-b from-purple-500 via-purple-600 to-purple-800 animate-pulse" />
-});
+
 
 const HomePage = () => {
 
@@ -72,11 +68,7 @@ const HomePage = () => {
                     <AnimationContainer delay={0.2} className="relative pt-20 pb-20 md:py-32 px-2 bg-transparent w-full">
                         <div className="absolute md:top-[10%] left-1/2 gradient w-3/4 -translate-x-1/2 h-1/4 md:h-1/3 inset-0 blur-[5rem] animate-image-glow"></div>
                         <div className="-m-2 rounded-xl p-2 ring-1 ring-inset ring-foreground/20 lg:-m-4 lg:rounded-2xl bg-opacity-50 backdrop-blur-3xl">
-                            <BorderBeam
-                                size={250}
-                                duration={12}
-                                delay={9}
-                            />
+                            
                             <Image
                                 src="/assets/dashboard-dark.svg"
                                 alt="Dashboard"
@@ -93,7 +85,7 @@ const HomePage = () => {
                 </div>
             </MaxWidthWrapper >
 
-            {/* Companies Section
+            {/* Companies Section we will add in future
             <MaxWidthWrapper>
                 <AnimationContainer delay={0.4}>
                     <div className="py-14">
@@ -226,67 +218,8 @@ const HomePage = () => {
                 </div>
             </MaxWidthWrapper>
 
-            {/* Technologies Section */}
-            <MaxWidthWrapper className="py-10">
-                <AnimationContainer delay={0.1}>
-                    <div className="flex flex-col items-center lg:items-center justify-center w-full py-8 max-w-xl mx-auto">
-                        <MagicBadge title="Technologies" />
-                        <h2 className="text-center lg:text-center text-3xl md:text-5xl !leading-[1.1] font-medium font-heading text-foreground mt-6">
-                            Technologies We Specialize In
-                        </h2>
-                        <p className="mt-4 text-center lg:text-center text-lg text-muted-foreground max-w-lg">
-                            We leverage a diverse stack of cutting-edge technologies to build robust and scalable solutions.
-                        </p>
-                    </div>
-                </AnimationContainer>
-                <div className="flex flex-wrap justify-center gap-4 py-8">
-                    
-                    <Image className="border-2 border-border" style={{borderRadius: 10, opacity: 0.8, height:40}} src="/icons/technologies/threejs.svg" alt="Three.js" width={100} height={25} />
-                    <Image className="border-2 border-border" style={{borderRadius: 10, opacity: 0.8, height:40}} src="/icons/technologies/typescrript.svg" alt="TypeScript" width={100} height={25} />
-                    <Image className="border-2 border-border" style={{borderRadius: 10, opacity: 0.8, height:40}} src="/icons/technologies/react.svg" alt="React" width={100} height={25} />
-                    
-                    <Image className="border-2 border-border" style={{borderRadius: 10, opacity: 0.8, height:40}} src="/icons/technologies/nodejs.svg" alt="Node.js" width={100} height={25} />
-                    <Image className="border-2 border-border" style={{borderRadius: 10, opacity: 0.8, height:40}} src="/icons/technologies/python.svg" alt="Python" width={100} height={25} />
-                    <Image className="border-2 border-border" style={{borderRadius: 10, opacity: 0.8, height:40}} src="/icons/technologies/nextjs.svg" alt="Next.js" width={100} height={25} />
-                    <Image className="border-2 border-border" style={{borderRadius: 10, opacity: 0.8, height:40}} src="/icons/technologies/docker.svg" alt="Docker" width={100} height={25} /> 
-                    <Image className="border-2 border-border" style={{borderRadius: 10, opacity: 0.8, height:40}} src="/icons/technologies/aws.svg" alt="AWS" width={100} height={25} />
-                    <Image className="border-2 border-border" style={{borderRadius: 10, opacity: 0.8, height:40}} src="/icons/technologies/kubernetes.svg" alt="Kubernetes" width={100} height={25} />
-                    <Image className="border-2 border-border" style={{borderRadius: 10, opacity: 0.8, height:40}} src="/icons/technologies/azure.svg" alt="Azure" width={100} height={25} />
-                    <Image className="border-2 border-border" style={{borderRadius: 10, opacity: 0.8, height:40}} src="/icons/technologies/anaconda.svg" alt="Anaconda" width={100} height={25} />
-                    <Image className="border-2 border-border" style={{borderRadius: 10, opacity: 0.8, height:40}} src="/icons/technologies/angular.svg" alt="Angular" width={100} height={25} />
-                    <Image className="border-2 border-border" style={{borderRadius: 10, opacity: 0.8, height:40}} src="/icons/technologies/bootstrap.svg" alt="Boostrap" width={100} height={25} />
-                    <Image className="border-2 border-border" style={{borderRadius: 10, opacity: 0.8, height:40}} src="/icons/technologies/cloudflare.svg" alt="Cloudflare" width={100} height={25} />
-                    <Image className="border-2 border-border" style={{borderRadius: 10, opacity: 0.8, height:40}} src="/icons/technologies/contaxtapi.svg" alt="Contaxtapi" width={100} height={25} />
-                    <Image className="border-2 border-border" style={{borderRadius: 10, opacity: 0.8, height:40}} src="/icons/technologies/docker.svg" alt="Docker" width={100} height={25} />
-                    <Image className="border-2 border-border" style={{borderRadius: 10, opacity: 0.8, height:40}} src="/icons/technologies/electronjs.svg" alt="Electron.js" width={100} height={25} />
-                    <Image className="border-2 border-border" style={{borderRadius: 10, opacity: 0.8, height:40}} src="/icons/technologies/express.svg" alt="Express.js" width={100} height={25} />
-                    <Image className="border-2 border-border" style={{borderRadius: 10, opacity: 0.8, height:40}} src="/icons/technologies/firebase.svg" alt="Firebase" width={100} height={25} />
-                    <Image className="border-2 border-border" style={{borderRadius: 10, opacity: 0.8, height:40}} src="/icons/technologies/haandlebbars.svg" alt="Handlebars" width={100} height={25} />
-                    <Image className="border-2 border-border" style={{borderRadius: 10, opacity: 0.8, height:40}} src="/icons/technologies/javascript.svg" alt="JavaScript" width={100} height={25} />
-                    <Image className="border-2 border-border" style={{borderRadius: 10, opacity: 0.8, height:40}} src="/icons/technologies/prisma.svg" alt="Prisma" width={100} height={25} />
-                    <Image className="border-2 border-border" style={{borderRadius: 10, opacity: 0.8, height:40}} src="/icons/technologies/solidity.svg" alt="Solidity" width={100} height={25} />
-                    <Image className="border-2 border-border" style={{borderRadius: 10, opacity: 0.8, height:40}} src="/icons/technologies/svelte.svg" alt="Svelte" width={100} height={25} />
-                    <Image className="border-2 border-border" style={{borderRadius: 10, opacity: 0.8, height:40}} src="/icons/technologies/vite.svg" alt="Vite" width={100} height={25} />
-                    <Image className="border-2 border-border" style={{borderRadius: 10, opacity: 0.8, height:40}} src="/icons/technologies/vue.svg" alt="Vue.js" width={100} height={25} />
-
-
-
-                </div>
-           
-                
-            </MaxWidthWrapper>
-            {/* <AnimationContainer delay={0.2} className="relative pt-20 pb-20 md:py-32 px-2 bg-transparent w-full">
-                        <div className="absolute md:top-[10%] left-1/2 gradient w-3/4 -translate-x-1/2 h-1/4 md:h-1/3 inset-0 blur-[5rem] animate-image-glow"></div>
-                        <div className="-m-2 rounded-xl p-0.5 ring-1 ring-inset ring-foreground/20 lg:-m-4 lg:rounded-2xl bg-opacity-50 backdrop-blur-3xl">
-                            
-                            <KubernatesHomePage />
-                            <div className="absolute -bottom-4 inset-x-0 w-full h-1/2 bg-gradient-to-t from-background z-40"></div>
-                            <div className="absolute bottom-0 md:-bottom-8 inset-x-0 w-full h-1/4 bg-gradient-to-t from-background z-50"></div>
-                        </div>
-                    </AnimationContainer> */}
-
-
-            {/* <KubernatesHomePage /> */}
+            
+            
 
             {/* CTA Section */}
             <MaxWidthWrapper className="mt-20 max-w-[100vw] overflow-x-hidden scrollbar-hide">
