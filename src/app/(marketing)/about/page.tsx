@@ -84,13 +84,13 @@ const AboutUsPage = () => {
                     <h3 className="mt-4 text-xl font-semibold">Abdul Latheef</h3>
                     <p className="text-muted-foreground">CEO | Co-founder</p>
                   </div>
-                  <div className="flex flex-col items-center text-center">
+                  {/* <div className="flex flex-col items-center text-center">
                     <div className="h-24 w-24 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 text-4xl font-bold">
                       SP
                     </div>
                     <h3 className="mt-4 text-xl font-semibold">S. Pramod</h3>
                     <p className="text-muted-foreground">CMO | Co-founder</p>
-                  </div>
+                  </div> */}
                   <div className="flex flex-col items-center text-center">
                     <div className="h-24 w-24 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 text-4xl font-bold">
                       MR
