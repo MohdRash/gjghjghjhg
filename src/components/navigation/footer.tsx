@@ -94,7 +94,7 @@ const Footer = () => {
                                         <Link href="https://x.com/devmonixtech" target='_blank' className="hover:text-foreground transition-all duration-300">
                                             <Image style={{opacity: 0.8, height:40}} src="/icons/social/twitter_x_icon.svg" alt="devmonix twitter x" width={100} height={25} />
                                         </Link>
-                                        <Link href="https://devmonixtechnologies.slack.com/team/U09JJEHNBPD" target='_blank' className="hover:text-foreground transition-all duration-300">
+                                        <Link href="https://www.linkedin.com/company/devmonix.io/?viewAsMember=true" target='_blank' className="hover:text-foreground transition-all duration-300">
                                             <Image style={{opacity: 0.8, height:40}} src="/icons/social/slack_icon.svg" alt="devmonix slack" width={100} height={25} />
                                         </Link>
                                         
